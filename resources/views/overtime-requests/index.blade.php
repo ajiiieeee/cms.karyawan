@@ -1,0 +1,9 @@
+@extends('layouts.main')
+
+@section('title', 'Permintaan Lembur')
+
+@section('content')
+<div class="d-flex justify-content-between mb-24"><h5>Permintaan Lembur</h5><a class="btn btn-primary-600" href="{{ route('overtime-requests.create') }}">Ajukan lembur</a></div>
+@include('partials.alert')
+<div class="card"><div class="card-body table-responsive"><table class="table"><thead><tr><th>Tanggal</th><th>Jam</th><th>Keperluan</th><th>Status</th><th></th></tr></thead><tbody>@forelse($requests as $item)<tr><td>{{ $item->tanggal->format('d M Y') }}</td><td>{{ $item->jam_mulai }} - {{ $item->jam_selesai }}</td><td>{{ $item->keperluan }}</td><td>{{ $item->status === 'Pending' ? 'Menunggu' : ($item->status === 'Approve' ? 'Disetujui' : 'Ditolak') }}</td><td>@if($item->status === 'Pending')<a href="{{ route('overtime-requests.edit', $item) }}">Ubah</a><form class="d-inline" method="POST" action="{{ route('overtime-requests.destroy', $item) }}">@csrf @method('DELETE')<button class="btn btn-link text-danger">Hapus</button></form>@endif</td></tr>@empty<tr><td colspan="5" class="text-center">Belum ada permintaan lembur.</td></tr>@endforelse</tbody></table></div></div>
+@endsection

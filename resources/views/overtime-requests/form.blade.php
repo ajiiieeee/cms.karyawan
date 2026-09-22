@@ -1,0 +1,23 @@
+@extends('layouts.main')
+
+@section('title', 'Permintaan Lembur')
+
+@section('content')
+<div class="card">
+    <div class="card-header"><h5>{{ $requestItem->exists ? 'Ubah' : 'Ajukan' }} lembur</h5></div>
+    <div class="card-body">
+        <form method="POST" action="{{ $requestItem->exists ? route('overtime-requests.update', $requestItem) : route('overtime-requests.store') }}">
+            @csrf
+            @if($requestItem->exists) @method('PUT') @endif
+            @include('partials.alert')
+            <div class="row gy-3">
+                <div class="col-md-4"><label class="form-label">Tanggal</label><input type="date" class="form-control" name="tanggal" value="{{ old('tanggal', optional($requestItem->tanggal)->format('Y-m-d')) }}" required></div>
+                <div class="col-md-4"><label class="form-label">Mulai</label><input type="time" class="form-control" name="jam_mulai" value="{{ old('jam_mulai', $requestItem->jam_mulai) }}" required></div>
+                <div class="col-md-4"><label class="form-label">Selesai</label><input type="time" class="form-control" name="jam_selesai" value="{{ old('jam_selesai', $requestItem->jam_selesai) }}" required></div>
+                <div class="col-12"><label class="form-label">Keperluan</label><textarea class="form-control" name="keperluan" required>{{ old('keperluan', $requestItem->keperluan) }}</textarea></div>
+            </div>
+            <button class="btn btn-primary-600 mt-24">Kirim</button>
+        </form>
+    </div>
+</div>
+@endsection
