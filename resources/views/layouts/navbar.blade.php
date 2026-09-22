@@ -6,7 +6,7 @@
           <iconify-icon icon="heroicons:bars-3-solid" class="icon"></iconify-icon>
         </button>
         <form class="navbar-search" action="#" method="GET">
-          <input type="text" class="bg-transparent" name="search" placeholder="Search" value="{{ request('search') }}">
+          <input type="text" class="bg-transparent" name="search" placeholder="Cari" value="{{ request('search') }}">
           <iconify-icon icon="ion:search-outline" class="icon"></iconify-icon>
         </form>
       </div>
@@ -28,7 +28,7 @@
           <div class="dropdown-menu to-top dropdown-menu-lg p-0">
             <div class="m-16 py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
               <div>
-                <h6 class="text-lg text-primary-light fw-semibold mb-0">Notifications</h6>
+                <h6 class="text-lg text-primary-light fw-semibold mb-0">Notifikasi</h6>
               </div>
               <span class="text-primary-600 fw-semibold text-lg w-40-px h-40-px rounded-circle bg-base d-flex justify-content-center align-items-center">05</span>
             </div>
@@ -41,8 +41,8 @@
                     <iconify-icon icon="bitcoin-icons:verify-outline" class="icon text-xxl"></iconify-icon>
                   </span>
                   <div>
-                    <h6 class="text-md fw-semibold mb-4">Congratulations</h6>
-                    <p class="mb-0 text-sm text-secondary-light text-w-200-px">Your profile has been Verified.</p>
+                    <h6 class="text-md fw-semibold mb-4">Selamat</h6>
+                    <p class="mb-0 text-sm text-secondary-light text-w-200-px">Profil Anda telah diverifikasi.</p>
                   </div>
                 </div>
                 <span class="text-sm text-secondary-light flex-shrink-0">23 Mins ago</span>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="text-center py-12 px-16">
-              <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-md hover-underline">See All Notification</a>
+              <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-md hover-underline">Lihat Semua Notifikasi</a>
             </div>
           </div>
         </div>
@@ -116,3 +116,4 @@
     </div>
   </div>
 </div>
+

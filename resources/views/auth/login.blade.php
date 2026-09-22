@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title -->
-  <title>{{ config('app.name', 'C-Mobile') }} | Login</title>
-  <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-logo.png') }}" sizes="16x16">
+  <title>{{ config('app.name', 'C-Mobile') }} | Masuk</title>
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" sizes="16x16">
   <!-- remix icon font css  -->
   <link rel="stylesheet" href="{{ asset('assets/css/lib/remixicon.css') }}">
   <!-- BootStrap css -->
@@ -67,18 +67,18 @@
 
 <div class="d-lg-flex bg-white login-page">
     <div class="w-50 d-lg-flex d-none overflow-hidden">
-        <img src="assets/images/welcome.jpeg" alt="Login Image" class="w-100 h-100 object-fit-cover">
+        <img src="{{ asset('assets/images/welcome.jpeg') }}" alt="Masuk Image" class="w-100 h-100 object-fit-cover">
     </div>
     <div class="lg-w-50 d-flex justify-content-center align-items-center login-form-side">
         <div class="max-w-440-px mx-auto login-form-card">
-            <img src="assets/images/logo_cm.png" alt="Logo" class="h-50 w-75 d-flex justify-content-center mx-auto">
+            <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="h-50 w-75 d-flex justify-content-center mx-auto">
             <div class="mx-38">
                 <div class="mt-32 mb-32">
                     <h1 class="h6 fw-bold text-dark mb-8">
-                        Welcome Back 👋
+                        Selamat Datang Kembali 👋
                     </h1>
                     <p class="text-sm text-dark mb-0">
-                        Log in to your account to continue
+                        Masuk ke akun Anda untuk melanjutkan
                     </p>
                 </div>
     
@@ -228,3 +228,6 @@
 </body>
 
 </html>
+
+
+

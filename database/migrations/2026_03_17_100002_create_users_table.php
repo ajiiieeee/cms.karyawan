@@ -15,7 +15,6 @@ return new class extends Migration
             $table->string('email', 255);
             $table->string('nama', 255);
             $table->string('foto', 255)->nullable();
-            $table->foreignId('grup_id')->constrained('grup')->cascadeOnDelete();
             $table->boolean('is_active')->default(true);
             $table->rememberToken();
             $table->timestamp('last_login_at')->nullable();
@@ -28,3 +27,4 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+

@@ -12,7 +12,7 @@
   <!-- Title -->
   <title>{{ config('app.name', 'Edudash') }} | @yield('title', 'Dashboard')</title>
   
-  <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon-logo.png') }}" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}" sizes="16x16">
   
   <!-- remix icon font css -->
   <link rel="stylesheet" href="{{ asset('assets/css/remixicon.css') }}">
@@ -333,3 +333,4 @@
 </body>
 
 </html>
+
