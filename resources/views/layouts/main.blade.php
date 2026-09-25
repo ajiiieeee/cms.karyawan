@@ -9,6 +9,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else if (savedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Title -->
   <title>{{ config('app.name', 'Edudash') }} | @yield('title', 'Dashboard')</title>
   
@@ -30,6 +43,8 @@
   <link rel="stylesheet" href="{{ asset('assets/css/lib/calendar.css') }}">
   <!-- main css -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <!-- dark theme css -->
+  <link rel="stylesheet" href="{{ asset('assets/css/theme-dark.css') }}">
   
   @stack('styles')
 </head>

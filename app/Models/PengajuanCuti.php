@@ -17,6 +17,7 @@ class PengajuanCuti extends Model
         'jumlah_hari',
         'status_approval',
         'keterangan',
+        'lampiran',
         'reject_statement',
         'status_pengajuan',
         'created_date',
