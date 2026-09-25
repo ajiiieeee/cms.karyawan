@@ -11,6 +11,7 @@
     <li><a href="{{ route('leave-requests.index') }}"><i class="ri-calendar-check-line"></i><span>Form Izin Cuti</span></a></li>
     <li><a href="{{ route('fimp.index') }}"><i class="ri-file-list-3-line"></i><span>FIMP</span></a></li>
     <li><a href="{{ route('overtime-requests.index') }}"><i class="ri-time-line"></i><span>Permintaan Lembur</span></a></li>
+    <li class="{{ request()->routeIs('performance-indicator.*') ? 'active-page' : '' }}"><a href="{{ route('performance-indicator.index') }}" class="{{ request()->routeIs('performance-indicator.*') ? 'active-page' : '' }}"><i class="ri-bar-chart-box-line"></i><span>Performance Indicator</span></a></li>
     <li><a href="{{ route('payroll.index') }}"><i class="ri-wallet-3-line"></i><span>Penggajian</span></a></li>
     <li><a href="{{ route('announcements.index') }}"><i class="ri-megaphone-line"></i><span>Pengumuman</span></a></li>
     <li><a href="javascript:void(0)" onclick="document.getElementById('logout-form').submit()"><i class="ri-shut-down-line text-danger-600"></i><span class="text-danger-600">Keluar</span></a></li>
